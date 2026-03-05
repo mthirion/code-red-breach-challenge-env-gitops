@@ -65,21 +65,11 @@ spec:
             secret:
               secretName: customers-ssh-git
           - name: maven-local
-            volumeClaimTemplate:
-              spec:
-                accessModes:
-                  - ReadWriteOnce
-                resources:
-                  requests:
-                    storage: 1Gi          
+            persistentVolumeClaim:
+              claimName: pvc-maven-local         
           - name: source-folder
-            volumeClaimTemplate:
-              spec:
-                accessModes:
-                  - ReadWriteOnce
-                resources:
-                  requests:
-                    storage: 1Gi
+            persistentVolumeClaim:
+              claimName: pvc-git-sources
           - emptyDir: {}
             name: maven-settings
 {{- if eq .Values.image.registry "Quay" }}
