@@ -63,7 +63,7 @@ spec:
             emptyDir: {}
           - name: sshkey
             secret:
-              secretName: gitssh
+              secretName: customers-ssh-git
           - name: maven-local
             volumeClaimTemplate:
               spec:
