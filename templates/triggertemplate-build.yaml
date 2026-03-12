@@ -25,7 +25,7 @@ spec:
           - name: source-branch
             value: main
           - name: output-image
-            value: https://{{ .Values.image.host }}/quayadmin/{{ .Values.app.name }}-{{ .Values.lab.username }}
+            value: {{ .Values.image.host }}/quayadmin/{{ .Values.app.name }}-{{ .Values.lab.username }}
           - name: sonarqube-host-url
             value: https://sonarqube-sonarqube{{ .Values.app.cluster }}
           - name: sonarqube-project-key
