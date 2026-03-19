@@ -20,6 +20,8 @@ spec:
           type: pipeline
       spec:
         params:
+          - name: trigger
+            value: 'webhook'
           - name: source-repo
             value: $(tt.params.git-repo-url)
           - name: source-branch
