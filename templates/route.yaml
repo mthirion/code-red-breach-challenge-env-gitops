@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/managed-by: EventListener
     app.kubernetes.io/part-of: Triggers
-    eventlistener: {{ .Values.app.name }}-el
+    eventlistener: {{ .Values.app.name }}
 spec:
   host: el-{{ .Values.app.name }}-{{ .Values.lab.username }}.{{ .Values.app.cluster }}
   to:
